@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Vivero & Paisajismo El Valle Florido | Plantas, Frutales y Riego en Quillota, La Cruz e Hijuelas</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        botanic: {
+                            50: '#f2f9f3',
+                            100: '#e1f2e4',
+                            200: '#c4e5cb',
+                            300: '#97d1a4',
+                            400: '#64b476',
+                            500: '#3f9754',
+                            600: '#2e7a40',
+                            700: '#266135',
+                            800: '#224e2c',
+                            900: '#1d4126',
+                            950: '#0c2313',
+                        },
+                        earth: {
+                            50: '#fbf8f4',
+                            100: '#f5eee5',
+                            200: '#ecddcc',
+                            300: '#dfc6ab',
+                            400: '#cfab84',
+                            500: '#be9163',
+                            600: '#b07e54',
+                            700: '#926445',
+                            800: '#77523c',
+                            900: '#614434',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+        .glass-header {
+            background: rgba(12, 35, 19, 0.95);
+            backdrop-filter: blur(12px);
+        }
+        .plant-badge {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-slate-800 antialiased selection:bg-emerald-600 selection:text-white pb-28 md:pb-16">
+
+    <!-- BARRA SUPERIOR INFORMATIVA -->
+    <div class="bg-botanic-950 text-emerald-200 text-[11px] py-1.5 px-4 text-center border-b border-emerald-900/60 font-medium">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <span class="flex items-center gap-1.5 mx-auto md:mx-0">
+                <i class="fa-solid fa-leaf text-emerald-400"></i> Despachos a parcelas y domicilios en <strong>Quillota, La Cruz, Hijuelas, Calera y Limache</strong>
+            </span>
+            <span class="hidden md:flex items-center gap-4 text-emerald-300">
+                <span><i class="fa-solid fa-location-dot text-emerald-400 mr-1"></i> Ruta 60-CH km 14, Hijuelas</span>
+                <span><i class="fa-regular fa-clock text-emerald-400 mr-1"></i> Lun a Dom: 9:00 a 19:30 hrs</span>
+            </span>
+        </div>
+    </div>
+
+    <!-- HEADER PRINCIPAL NAVEGACIÓN -->
+    <header class="sticky top-0 z-40 glass-header border-b border-emerald-800/40 text-white shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-3">
+            <!-- LOGO & BRAND -->
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-emerald-500 to-botanic-700 flex items-center justify-center text-white shadow-lg shadow-emerald-950/40 border border-emerald-400/30">
+                    <i class="fa-solid fa-seedling text-lg"></i>
+                </div>
+                <div>
+                    <span class="text-base sm:text-lg font-black tracking-tight text-white flex items-center gap-1.5">
+                        El Valle Florido <span class="text-[9px] bg-emerald-500/30 text-emerald-300 border border-emerald-400/40 px-2 py-0.5 rounded-full uppercase tracking-wider font-extrabold">Vivero & Paisajismo</span>
+                    </span>
+                    <p class="text-[10px] text-emerald-300/80 -mt-0.5 font-medium hidden sm:block">Plantas seleccionadas, frutales certificados y diseño de jardines</p>
+                </div>
+            </a>
+
+            <!-- ACCIONES HEADER -->
+            <div class="flex items-center gap-2 sm:gap-3">
+                <a href="#servicios" class="hidden sm:inline-flex items-center gap-1.5 text-xs text-emerald-200 hover:text-white bg-emerald-900/40 hover:bg-emerald-900/80 border border-emerald-700/60 px-3 py-2 rounded-xl transition font-semibold">
+                    <i class="fa-solid fa-faucet-drip text-emerald-400"></i> Riego & Paisajismo
+                </a>
+                
+                <a href="https://api.whatsapp.com/send?phone=56982880494&text=Hola%20Vivero%20El%20Valle%20Florido%2C%20quisiera%20consultar%20por%20plantas%20disponibles%20y%20asesor%C3%ADa." target="_blank" class="hidden md:inline-flex items-center gap-1.5 text-xs text-white bg-emerald-600 hover:bg-emerald-500 px-3.5 py-2 rounded-xl shadow-md transition font-bold">
+                    <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Vivero
+                </a>
+
+                <!-- BOTÓN CARRITO DESPLEGABLE -->
+                <button onclick="toggleCarritoModal()" class="relative bg-emerald-700/80 hover:bg-emerald-600 active:scale-95 text-white px-3.5 py-2 rounded-xl flex items-center gap-2 transition border border-emerald-500/40 shadow-sm">
+                    <i class="fa-solid fa-basket-shopping text-sm text-emerald-300"></i>
+                    <span class="text-xs font-black hidden sm:inline">Mi Pedido</span>
+                    <span id="badgeCartTotal" class="bg-amber-400 text-stone-950 font-black text-[11px] w-5 h-5 rounded-full flex items-center justify-center -ml-0.5 shadow">0</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- CATEGORÍAS PILLS RÁPIDAS EN SUBHEADER -->
+        <div class="bg-botanic-900/90 border-t border-emerald-800/40 px-4 py-2 overflow-x-auto hide-scroll">
+            <div class="max-w-7xl mx-auto flex items-center gap-2">
+                <span class="text-[11px] font-bold text-emerald-400 uppercase tracking-wider shrink-0 mr-1 hidden sm:inline">
+                    <i class="fa-solid fa-filter text-xs"></i> Catálogo:
+                </span>
+                <button onclick="filtrarCategoria('todos')" class="cat-pill active-cat px-3 py-1 rounded-lg text-xs font-bold transition whitespace-nowrap bg-emerald-500 text-stone-950">
+                    🌱 Todos (22)
+                </button>
+                <button onclick="filtrarCategoria('frutales')" class="cat-pill px-3 py-1 rounded-lg text-xs font-bold transition whitespace-nowrap bg-emerald-950/70 text-emerald-200 hover:bg-emerald-800 border border-emerald-800">
+                    🥑 Frutales & Cítricos
+                </button>
+                <button onclick="filtrarCategoria('interior')" class="cat-pill px-3 py-1 rounded-lg text-xs font-bold transition whitespace-nowrap bg-emerald-950/70 text-emerald-200 hover:bg-emerald-800 border border-emerald-800">
+                    🪴 Plantas de Interior
+                </button>
+                <button onclick="filtrarCategoria('flores')" class="cat-pill px-3 py-1 rounded-lg text-xs font-bold transition whitespace-nowrap bg-emerald-950/70 text-emerald-200 hover:bg-emerald-800 border border-emerald-800">
+                    🌸 Flores & Arbustos
+                </button>
+                <button onclick="filtrarCategoria('sustratos')" class="cat-pill px-3 py-1 rounded-lg text-xs font-bold transition whitespace-nowrap bg-emerald-950/70 text-emerald-200 hover:bg-emerald-800 border border-emerald-800">
+                    🪵 Sustratos & Abonos
+                </button>
+                <button onclick="filtrarCategoria('macetas')" class="cat-pill px-3 py-1 rounded-lg text-xs font-bold transition whitespace-nowrap bg-emerald-950/70 text-emerald-200 hover:bg-emerald-800 border border-emerald-800">
+                    🏺 Maceteros & Greda
+                </button>
+                <button onclick="filtrarCategoria('packs')" class="cat-pill px-3 py-1 rounded-lg text-xs font-bold transition whitespace-nowrap bg-amber-500/20 text-amber-300 border border-amber-500/40 hover:bg-amber-500/30">
+                    ⭐ Packs Ahorro
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-gradient-to-b from-botanic-950 via-botanic-900 to-botanic-800 text-white pt-8 pb-14 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <!-- BACKGROUND DECORATIONS -->
+        <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-emerald-600/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -left-20 -top-20 w-96 h-96 bg-botanic-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 space-y-4">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 text-xs font-bold">
+                        <i class="fa-solid fa-certificate text-emerald-400"></i> Producción local en el Valle de Hijuelas & La Cruz
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
+                        Transforma tu hogar y parcela con <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-200">plantas saludables y raíces vivas</span>.
+                    </h1>
+                    <p class="text-emerald-100/90 text-sm sm:text-base leading-relaxed max-w-2xl font-normal">
+                        Árboles frutales injertados de alta producción, plantas de interior para purificar tus espacios, flores de temporada y asesoría técnica en riego y plantación. Compra online y recibe directo en tu puerta.
+                    </p>
+
+                    <div class="flex flex-wrap gap-3 pt-2">
+                        <a href="#catalogo" class="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 active:scale-95 text-stone-950 font-black px-6 py-3.5 rounded-2xl text-sm flex items-center gap-2 shadow-xl shadow-emerald-950/40 transition">
+                            <i class="fa-solid fa-leaf"></i> Explorar Catálogo & Precios
+                        </a>
+                        <a href="#cotizador-paisajismo" class="bg-botanic-900/90 hover:bg-botanic-800 active:scale-95 text-white border border-emerald-600/60 font-bold px-5 py-3.5 rounded-2xl text-sm flex items-center gap-2 transition">
+                            <i class="fa-solid fa-compass-drafting text-emerald-400"></i> Cotizar Paisajismo / Riego
+                        </a>
+                    </div>
+
+                    <!-- BENEFICIOS RÁPIDOS -->
+                    <div class="grid grid-cols-3 gap-3 pt-4 border-t border-emerald-800/60 text-left">
+                        <div>
+                            <p class="text-base sm:text-lg font-black text-emerald-400">100%</p>
+                            <p class="text-[11px] text-emerald-200/80 leading-tight">Garantía de prendimiento</p>
+                        </div>
+                        <div>
+                            <p class="text-base sm:text-lg font-black text-emerald-400">+1.500</p>
+                            <p class="text-[11px] text-emerald-200/80 leading-tight">Plantas listas en stock</p>
+                        </div>
+                        <div>
+                            <p class="text-base sm:text-lg font-black text-emerald-400">Ruta Propia</p>
+                            <p class="text-[11px] text-emerald-200/80 leading-tight">Despacho en camión seguro</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BANNER DESTACADO DENTRO DE HERO -->
+                <div class="lg:col-span-5">
+                    <div class="bg-gradient-to-b from-stone-900/90 to-botanic-950/90 p-5 rounded-3xl border border-emerald-500/30 shadow-2xl relative">
+                        <span class="absolute -top-3 right-5 bg-amber-400 text-stone-950 font-black text-[10px] px-3 py-1 rounded-full uppercase tracking-wider shadow">
+                            🔥 Lo Más Vendido de la Temporada
+                        </span>
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=300&q=80" alt="Palto Hass" class="w-20 h-20 rounded-2xl object-cover border border-emerald-500/40 shrink-0">
+                            <div>
+                                <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider">Injerto Certificado</span>
+                                <h3 class="text-base font-black text-white">Palto Hass de Calidad Exportación</h3>
+                                <p class="text-xs text-stone-300">Altura: 1.30m a 1.50m en bolsa reforzada</p>
+                                <p class="text-sm font-black text-amber-400 mt-1">$14.990 CLP</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-emerald-200/80 leading-relaxed mb-4">
+                            Ideal para parcelas y patios con alta resistencia climática y producción rápida al segundo año.
+                        </p>
+                        <button onclick="agregarAlCarro(1)" class="w-full bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-bold py-3 rounded-xl text-xs flex items-center justify-center gap-2 shadow-lg transition">
+                            <i class="fa-solid fa-cart-plus"></i> Agregar Palto a mi Pedido
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PACKS DE AHORRO DESTACADOS -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- PACK 1 -->
+            <div class="bg-white rounded-3xl p-5 border-2 border-emerald-200 shadow-lg hover:border-emerald-500 transition space-y-3 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start gap-2">
+                        <span class="text-[10px] bg-emerald-100 text-botanic-800 font-extrabold px-2.5 py-0.5 rounded-full uppercase tracking-wide">
+                            🥑 Parcela & Jardín
+                        </span>
+                        <span class="text-xs font-black text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">Ahorras $7.990</span>
+                    </div>
+                    <h3 class="text-base font-black text-slate-900 mt-2">Pack "Huerto & Cítricos en Casa"</h3>
+                    <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                        1 Limonero 4 Estaciones (con limoncitos) + 1 Naranjo Thompson + 1 Saco Tierra Hoja Harneada 50L + 1 Humus Lombriz 20L.
+                    </p>
+                </div>
+                <div class="pt-2 border-t border-slate-100 flex items-center justify-between">
+                    <div>
+                        <span class="text-xs text-slate-400 line-through">$37.980</span>
+                        <p class="text-lg font-black text-emerald-700">$29.990</p>
+                    </div>
+                    <button onclick="agregarPack('Pack Huerto & Cítricos en Casa', 29990)" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow active:scale-95 transition">
+                        <i class="fa-solid fa-plus mr-1"></i> Llevar Pack
+                    </button>
+                </div>
+            </div>
+
+            <!-- PACK 2 -->
+            <div class="bg-white rounded-3xl p-5 border-2 border-amber-300 shadow-lg hover:border-amber-500 transition space-y-3 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start gap-2">
+                        <span class="text-[10px] bg-amber-100 text-amber-900 font-extrabold px-2.5 py-0.5 rounded-full uppercase tracking-wide">
+                            🪴 Departamento & Casa
+                        </span>
+                        <span class="text-xs font-black text-amber-600 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-200">Ahorras $10.000</span>
+                    </div>
+                    <h3 class="text-base font-black text-slate-900 mt-2">Pack "Jungla Urbana Interior"</h3>
+                    <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                        1 Monstera Deliciosa (Hoja costilla) + 1 Ficus Lyrata (1.10m) + 1 Sansevieria purificadora + 1 Fertilizante follaje.
+                    </p>
+                </div>
+                <div class="pt-2 border-t border-slate-100 flex items-center justify-between">
+                    <div>
+                        <span class="text-xs text-slate-400 line-through">$55.000</span>
+                        <p class="text-lg font-black text-amber-700">$44.990</p>
+                    </div>
+                    <button onclick="agregarPack('Pack Jungla Urbana Interior', 44990)" class="bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow active:scale-95 transition">
+                        <i class="fa-solid fa-plus mr-1"></i> Llevar Pack
+                    </button>
+                </div>
+            </div>
+
+            <!-- PACK 3 -->
+            <div class="bg-white rounded-3xl p-5 border-2 border-pink-200 shadow-lg hover:border-pink-500 transition space-y-3 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start gap-2">
+                        <span class="text-[10px] bg-pink-100 text-pink-900 font-extrabold px-2.5 py-0.5 rounded-full uppercase tracking-wide">
+                            🌸 Terraza & Entrada
+                        </span>
+                        <span class="text-xs font-black text-pink-600 bg-pink-50 px-2 py-0.5 rounded-md border border-pink-200">Ahorras $9.980</span>
+                    </div>
+                    <h3 class="text-base font-black text-slate-900 mt-2">Pack "Jardín Floral & Aromático"</h3>
+                    <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                        3 Hortensias Gigantes de color a elección + 3 Lavandas francesas aromáticas + 1 Saco Tierra Harneada 50L.
+                    </p>
+                </div>
+                <div class="pt-2 border-t border-slate-100 flex items-center justify-between">
+                    <div>
+                        <span class="text-xs text-slate-400 line-through">$44.970</span>
+                        <p class="text-lg font-black text-pink-700">$34.990</p>
+                    </div>
+                    <button onclick="agregarPack('Pack Jardín Floral & Aromático', 34990)" class="bg-pink-600 hover:bg-pink-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow active:scale-95 transition">
+                        <i class="fa-solid fa-plus mr-1"></i> Llevar Pack
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BARRA DE BÚSQUEDA Y FILTRO -->
+    <section id="catalogo" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+            <div>
+                <h2 class="text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2">
+                    <i class="fa-solid fa-tree text-emerald-600"></i> Catálogo de Plantas & Productos
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-500">Selecciona tus plantas y calcula tu despacho automáticamente</p>
+            </div>
+
+            <!-- BUSCADOR -->
+            <div class="w-full md:w-80 relative">
+                <input type="text" id="inputBusqueda" onkeyup="buscarPlantas()" placeholder="Buscar palto, monstera, tierra, lavanda..." class="w-full bg-white border border-stone-300 rounded-2xl px-4 py-2.5 pl-10 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 shadow-sm">
+                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-stone-400 text-xs"></i>
+            </div>
+        </div>
+
+        <!-- GRID DE PRODUCTOS -->
+        <div id="gridProductos" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+            <!-- RENDERIZADO DINÁMICAMENTE POR JS -->
+        </div>
+    </section>
+
+    <!-- SECCIÓN COTIZADOR DE PAISAJISMO Y RIEGO -->
+    <section id="cotizador-paisajismo" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="bg-gradient-to-br from-botanic-900 via-botanic-950 to-stone-900 rounded-3xl p-6 sm:p-10 text-white shadow-2xl border border-emerald-600/30">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-6 space-y-4">
+                    <span class="text-xs bg-emerald-500/20 text-emerald-300 font-extrabold px-3 py-1 rounded-full border border-emerald-400/30 uppercase tracking-wider">
+                        🏡 Servicios en Terreno & Parcelas
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-black tracking-tight leading-snug">
+                        ¿Tienes una parcela o jardín que necesita <span class="text-emerald-400">riego o diseño profesional</span>?
+                    </h2>
+                    <p class="text-sm text-emerald-100/80 leading-relaxed">
+                        Nuestro equipo de agrónomos y paisajistas visita tu terreno en Quillota, La Cruz, Hijuelas, Limache y alrededores para diseñar el jardín óptimo según tu tipo de suelo y disponibilidad de agua.
+                    </p>
+
+                    <div class="space-y-2.5 pt-2">
+                        <label class="flex items-center gap-3 p-3 bg-white/5 hover:bg-white/10 rounded-2xl border border-emerald-500/20 cursor-pointer transition">
+                            <input type="checkbox" id="checkPasto" class="w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500">
+                            <div>
+                                <p class="text-xs font-bold text-white">Instalación de Pasto en Rollo (Palmetas Estadio/Bermuda)</p>
+                                <p class="text-[11px] text-emerald-300/80">Nivelación de suelo, tierra harneada y riego inicial</p>
+                            </div>
+                        </label>
+
+                        <label class="flex items-center gap-3 p-3 bg-white/5 hover:bg-white/10 rounded-2xl border border-emerald-500/20 cursor-pointer transition">
+                            <input type="checkbox" id="checkRiego" class="w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500">
+                            <div>
+                                <p class="text-xs font-bold text-white">Riego Tecnificado por Goteo y Aspersión Automática</p>
+                                <p class="text-[11px] text-emerald-300/80">Programadores con sensor de lluvia y ahorro de agua 40%</p>
+                            </div>
+                        </label>
+
+                        <label class="flex items-center gap-3 p-3 bg-white/5 hover:bg-white/10 rounded-2xl border border-emerald-500/20 cursor-pointer transition">
+                            <input type="checkbox" id="checkPlantacion" class="w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500">
+                            <div>
+                                <p class="text-xs font-bold text-white">Plantación de Frutales en Huerto (Paltos / Cítricos)</p>
+                                <p class="text-[11px] text-emerald-300/80">Trazado, hoyado, enmienda orgánica y tutores de coligüe</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="pt-2">
+                        <button onclick="solicitarVisitaPaisajismo()" class="w-full sm:w-auto bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-stone-950 font-black px-6 py-3.5 rounded-2xl text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/60 transition active:scale-95">
+                            <i class="fa-brands fa-whatsapp text-base"></i> Coordinar Visita Técnica a Terreno
+                        </button>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="grid grid-cols-2 gap-3">
+                        <img src="https://images.unsplash.com/photo-1558904541-efa8c4a08931?auto=format&fit=crop&w=400&q=80" alt="Jardín diseñado" class="rounded-2xl object-cover h-44 w-full border border-emerald-500/30">
+                        <img src="https://images.unsplash.com/photo-1592417817098-8f3d6910985b?auto=format&fit=crop&w=400&q=80" alt="Riego tecnificado" class="rounded-2xl object-cover h-44 w-full border border-emerald-500/30">
+                        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=400&q=80" alt="Pasto verde" class="rounded-2xl object-cover h-44 w-full border border-emerald-500/30">
+                        <div class="bg-emerald-950/80 rounded-2xl p-4 flex flex-col justify-center items-center text-center border border-emerald-500/30">
+                            <i class="fa-solid fa-droplet text-emerald-400 text-2xl mb-1"></i>
+                            <p class="text-xs font-black text-white">Eficiencia Hídrica</p>
+                            <p class="text-[10px] text-emerald-200 mt-0.5">Adaptado al clima y suelo de la V Región</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS REALES DE CLIENTES -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="text-center max-w-2xl mx-auto mb-8">
+            <h2 class="text-2xl font-black text-slate-900 tracking-tight">Lo que dicen quienes ya compraron</h2>
+            <p class="text-xs text-slate-500 mt-1">Vecinos de parcelas y casas de Hijuelas, La Cruz, Quillota y Limache</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white p-5 rounded-3xl border border-stone-200 shadow-sm space-y-2.5">
+                <div class="flex items-center gap-1 text-amber-400 text-xs">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed italic">
+                    "Compré 12 paltos Hass y 4 limoneros para mi parcela en San Isidro (Quillota). Llegaron en camión al día siguiente, plantas firmes con excelente raíz. Todos prendieron perfecto."
+                </p>
+                <div class="pt-2 border-t border-slate-100 flex items-center justify-between">
+                    <div>
+                        <p class="text-xs font-bold text-slate-900">Rodrigo Valenzuela</p>
+                        <p class="text-[10px] text-slate-400">Parcelero en Quillota</p>
+                    </div>
+                    <span class="text-[10px] bg-emerald-50 text-emerald-700 font-bold px-2 py-0.5 rounded-full">✓ Compra Verificada</span>
+                </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-3xl border border-stone-200 shadow-sm space-y-2.5">
+                <div class="flex items-center gap-1 text-amber-400 text-xs">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed italic">
+                    "Pedí el Pack Jungla Urbana para mi living en La Calera. La Monstera venía enorme con 5 hojas abiertas y los sustratos limpios y sin bichos. El pedido por WhatsApp fue súper fácil."
+                </p>
+                <div class="pt-2 border-t border-slate-100 flex items-center justify-between">
+                    <div>
+                        <p class="text-xs font-bold text-slate-900">Camila Henríquez</p>
+                        <p class="text-[10px] text-slate-400">La Calera</p>
+                    </div>
+                    <span class="text-[10px] bg-emerald-50 text-emerald-700 font-bold px-2 py-0.5 rounded-full">✓ Compra Verificada</span>
+                </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-3xl border border-stone-200 shadow-sm space-y-2.5">
+                <div class="flex items-center gap-1 text-amber-400 text-xs">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed italic">
+                    "Nos instalaron 80m² de pasto estadio y el sistema de riego por goteo para el cerco vivo en Hijuelas. Trabajo prolijo, en fecha y a un precio muy justo."
+                </p>
+                <div class="pt-2 border-t border-slate-100 flex items-center justify-between">
+                    <div>
+                        <p class="text-xs font-bold text-slate-900">Eduardo Morales</p>
+                        <p class="text-[10px] text-slate-400">Hijuelas</p>
+                    </div>
+                    <span class="text-[10px] bg-emerald-50 text-emerald-700 font-bold px-2 py-0.5 rounded-full">✓ Compra Verificada</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES (FAQ BOTÁNICO) -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h2 class="text-xl font-black text-slate-900 tracking-tight text-center mb-6">Preguntas Frecuentes de Nuestros Clientes</h2>
+        <div class="space-y-3">
+            <details class="bg-white rounded-2xl p-4 border border-stone-200 shadow-sm cursor-pointer group">
+                <summary class="text-xs sm:text-sm font-bold text-slate-800 flex justify-between items-center select-none">
+                    <span>¿Cómo se coordina el despacho de árboles y plantas grandes?</span>
+                    <i class="fa-solid fa-chevron-down text-emerald-600 text-xs transition group-open:rotate-180"></i>
+                </summary>
+                <p class="text-xs text-slate-600 mt-2.5 leading-relaxed">
+                    Contamos con camión propio 3/4 adaptado para transportar plantas sin dañar follajes ni quebrar ramas. Coordinamos día y hora exacta de entrega en tu casa o parcela en Quillota, La Cruz, Hijuelas, Nogales, Calera y Limache.
+                </p>
+            </details>
+
+            <details class="bg-white rounded-2xl p-4 border border-stone-200 shadow-sm cursor-pointer group">
+                <summary class="text-xs sm:text-sm font-bold text-slate-800 flex justify-between items-center select-none">
+                    <span>¿Los árboles frutales vienen injertados y con garantía?</span>
+                    <i class="fa-solid fa-chevron-down text-emerald-600 text-xs transition group-open:rotate-180"></i>
+                </summary>
+                <p class="text-xs text-slate-600 mt-2.5 leading-relaxed">
+                    Sí, todos nuestros paltos, limoneros, naranjos y frutales de carozo provienen de portainjertos certificados de viveros registrados en el SAG. Te entregamos la guía de plantación y fertilización adecuada para que prendan con vigor.
+                </p>
+            </details>
+
+            <details class="bg-white rounded-2xl p-4 border border-stone-200 shadow-sm cursor-pointer group">
+                <summary class="text-xs sm:text-sm font-bold text-slate-800 flex justify-between items-center select-none">
+                    <span>¿Cómo se realiza el pago?</span>
+                    <i class="fa-solid fa-chevron-down text-emerald-600 text-xs transition group-open:rotate-180"></i>
+                </summary>
+                <p class="text-xs text-slate-600 mt-2.5 leading-relaxed">
+                    Puedes pagar mediante Transferencia bancaria anticipada o directamente en efectivo / tarjeta de débito/crédito al momento de recibir tus plantas en tu domicilio con nuestra máquina Redcompra móvil.
+                </p>
+            </details>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-botanic-950 text-white border-t border-emerald-900/60 pt-10 pb-24 md:pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8 text-xs">
+                <div class="space-y-2">
+                    <span class="text-base font-black text-white flex items-center gap-2">
+                        <i class="fa-solid fa-seedling text-emerald-400"></i> El Valle Florido
+                    </span>
+                    <p class="text-emerald-200/80 leading-relaxed">
+                        Vivero boutique & paisajismo integral. Fomentando la vida verde y la producción local en la V Región desde hace más de 12 años.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white uppercase tracking-wider mb-2 text-[11px] text-emerald-400">Ubicación & Vivero</h4>
+                    <p class="text-emerald-200/80 leading-relaxed">
+                        <i class="fa-solid fa-map-pin text-emerald-400 mr-1.5"></i> Ruta 60-CH km 14, Hijuelas (A pasos de Ocoa)<br>
+                        Región de Valparaíso, Chile
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white uppercase tracking-wider mb-2 text-[11px] text-emerald-400">Horarios de Atención</h4>
+                    <p class="text-emerald-200/80 leading-relaxed">
+                        Lunes a Sábado: 9:00 a 19:30 hrs<br>
+                        Domingos & Festivos: 9:30 a 18:30 hrs<br>
+                        <span class="text-emerald-400 font-semibold">¡Abierto todo el año!</span>
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white uppercase tracking-wider mb-2 text-[11px] text-emerald-400">Contacto Directo</h4>
+                    <p class="text-emerald-200/80 leading-relaxed mb-2">
+                        WhatsApp Pedidos: +56 9 8288 0494<br>
+                        Correo: contacto@elvalleflorido.cl
+                    </p>
+                    <a href="https://api.whatsapp.com/send?phone=56982880494&text=Hola%20El%20Valle%20Florido%2C%20quisiera%20hacer%20un%20pedido." target="_blank" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">
+                        <i class="fa-brands fa-whatsapp"></i> Hablar por Chat
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-emerald-900/60 pt-6 flex flex-col sm:flex-row justify-between items-center text-[11px] text-emerald-400/80 gap-2">
+                <p>© 2026 Vivero & Paisajismo El Valle Florido Spa. Todos los derechos reservados.</p>
+                <p class="bg-emerald-900/60 text-emerald-300 px-3 py-1 rounded-full font-bold">
+                    🚀 Maqueta de demostración comercial interactiva
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL / SLIDE-OVER CARRITO DE COMPRAS -->
+    <div id="modalCarrito" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex justify-end">
+        <div class="w-full max-w-md bg-white h-full flex flex-col shadow-2xl animate-in slide-in-from-right duration-200">
+            <!-- HEADER MODAL -->
+            <div class="p-4 bg-botanic-950 text-white flex items-center justify-between border-b border-emerald-800">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-xl bg-emerald-600/30 text-emerald-400 flex items-center justify-center">
+                        <i class="fa-solid fa-basket-shopping text-sm"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-black">Tu Carrito de Plantas</h3>
+                        <p class="text-[10px] text-emerald-300">Despacho en camión a Quillota, Hijuelas, La Cruz y alrededores</p>
+                    </div>
+                </div>
+                <button onclick="toggleCarritoModal()" class="w-8 h-8 rounded-full bg-emerald-900/60 hover:bg-emerald-800 text-emerald-300 flex items-center justify-center">
+                    <i class="fa-solid fa-xmark text-sm"></i>
+                </button>
+            </div>
+
+            <!-- CONTENIDO DE ITEMS -->
+            <div id="carritoItemsLista" class="flex-1 overflow-y-auto p-4 space-y-3">
+                <!-- LLENADO DINÁMICAMENTE -->
+            </div>
+
+            <!-- FORMULARIO DE DESPACHO & TOTAL -->
+            <div class="p-4 bg-stone-50 border-t border-stone-200 space-y-3">
+                <div>
+                    <label class="block text-[11px] font-bold text-slate-700 mb-1">Comuna de entrega (para calcular despacho):</label>
+                    <select id="selectComuna" onchange="calcularTotales()" class="w-full bg-white border border-stone-300 rounded-xl px-3 py-2 text-xs font-semibold text-slate-800 focus:ring-2 focus:ring-emerald-500">
+                        <option value="hijuelas" data-costo="0">Hijuelas (Retiro en Vivero / Despacho Gratis $0)</option>
+                        <option value="lacruz" data-costo="2500">La Cruz (Despacho a Domicilio $2.500)</option>
+                        <option value="quillota" data-costo="3000">Quillota (Despacho a Domicilio $3.000)</option>
+                        <option value="calera" data-costo="3000">La Calera (Despacho a Domicilio $3.000)</option>
+                        <option value="limache" data-costo="4000">Limache / Olmué (Despacho en Camión $4.000)</option>
+                        <option value="laligua" data-costo="5000">La Ligua / Cabildo (Despacho Especial $5.000)</option>
+                        <option value="retiro" data-costo="0">Retiro directo en el Vivero (Sin costo $0)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-[11px] font-bold text-slate-700 mb-1">Nombre o Parcela:</label>
+                    <input type="text" id="inputNombreCliente" placeholder="Ej. Juan Pérez - Parcela 14 Los Aromos" class="w-full bg-white border border-stone-300 rounded-xl px-3 py-1.5 text-xs text-slate-800">
+                </div>
+
+                <!-- DESGLOSE -->
+                <div class="bg-white p-3 rounded-2xl border border-stone-200 space-y-1 text-xs">
+                    <div class="flex justify-between text-slate-500">
+                        <span>Subtotal Plantas:</span>
+                        <span id="labelSubtotal" class="font-semibold text-slate-800">$0</span>
+                    </div>
+                    <div class="flex justify-between text-slate-500">
+                        <span>Costo Despacho:</span>
+                        <span id="labelDespacho" class="font-semibold text-emerald-700">$0</span>
+                    </div>
+                    <div class="flex justify-between text-sm font-black text-slate-900 pt-1.5 border-t border-slate-100">
+                        <span>Total Final:</span>
+                        <span id="labelTotalFinal" class="text-emerald-700">$0</span>
+                    </div>
+                </div>
+
+                <!-- BOTÓN ENVIAR PEDIDO WHATSAPP -->
+                <button onclick="enviarPedidoWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-black py-3 rounded-2xl text-xs flex items-center justify-center gap-2 shadow-lg shadow-emerald-700/30 transition">
+                    <i class="fa-brands fa-whatsapp text-base"></i> Enviar Pedido a WhatsApp del Vivero
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BARRA FLOTANTE MÓVIL (BOTTOM BAR) -->
+    <div class="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-stone-200 py-2 px-4 md:hidden flex items-center justify-between shadow-2xl">
+        <div class="flex items-center gap-2">
+            <div class="w-10 h-10 rounded-2xl bg-botanic-100 text-botanic-800 flex items-center justify-center font-black text-sm">
+                <i class="fa-solid fa-basket-shopping text-emerald-700"></i>
+            </div>
+            <div>
+                <p class="text-[10px] text-slate-400 font-bold uppercase leading-none">Total Carro</p>
+                <p id="bottomBarTotal" class="text-sm font-black text-emerald-700">$0</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-2">
+            <button onclick="toggleCarritoModal()" class="bg-botanic-800 hover:bg-botanic-900 text-white font-bold text-xs px-4 py-2.5 rounded-xl flex items-center gap-1.5 active:scale-95 transition">
+                <i class="fa-solid fa-eye text-emerald-400"></i> Ver Carro (<span id="bottomBarCount">0</span>)
+            </button>
+            <a href="https://api.whatsapp.com/send?phone=56982880494&text=Hola%20Vivero%20El%20Valle%20Florido%2C%20quisiera%20hacer%20una%20consulta." target="_blank" class="bg-emerald-600 text-white p-2.5 rounded-xl flex items-center justify-center active:scale-95 shadow">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LÓGICA INTERACTIVA -->
+    <script>
+        const PRODUCTOS = [
+            // FRUTALES
+            {
+                id: 1,
+                nombre: "Palto Hass Injertado Certificado",
+                categoria: "frutales",
+                precio: 14990,
+                badge: "Más Vendido",
+                badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-300",
+                altura: "1.30m - 1.50m",
+                luz: "Pleno Sol",
+                riego: "Frecuente / Suelo drenado",
+                descripcion: "Portainjerto clonal certificado, adaptado a los valles de Quillota y La Cruz. Rápida entrada en producción.",
+                imagen: "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=400&q=80"
+            },
+            {
+                id: 2,
+                nombre: "Limonero 4 Estaciones (Con Fruto)",
+                categoria: "frutales",
+                precio: 12990,
+                badge: "Cosecha Continua",
+                badgeColor: "bg-amber-100 text-amber-800 border-amber-300",
+                altura: "1.20m",
+                luz: "Pleno Sol",
+                riego: "Moderado",
+                descripcion: "Árbol frutal noble que florece y da limones jugosos prácticamente todo el año en clima de la zona central.",
+                imagen: "https://images.unsplash.com/photo-1590502593747-42a996133562?auto=format&fit=crop&w=400&q=80"
+            },
+            {
+                id: 3,
+                nombre: "Naranjo Thompson Navel",
+                categoria: "frutales",
+                precio: 13500,
+                badge: "Sin Semilla",
+                badgeColor: "bg-orange-100 text-orange-800 border-orange-300",
+                altura: "1.30m",
+                luz: "Pleno Sol",
+                riego: "Moderado",
+                descripcion: "Naranjas de ombligo dulces, de piel fácil de pelar y pulpa exquisita para jugo o mesa.",
+                imagen: "https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?auto=format&fit=crop&w=400&q=80"
+            },
+            {
+                id: 4,
+                nombre: "Mandarino W. Murcott",
+                categoria: "frutales",
+                precio: 14500,
+                badge: "Exportación",
+                badgeColor: "bg-orange-100 text-orange-800 border-orange-300",
+                altura: "1.20m",
+                luz: "Pleno Sol",
+                riego: "Moderado",
+                descripcion: "Frutos de piel brillante y sabor concentrado sin pepas. Ideal para huertos familiares.",
+                imagen: "https://images.unsplash.com/photo-1557800636-894a64c1696f?auto=format&fit=crop&w=400&q=80"
+            },
+            {
+                id: 5,
+                nombre: "Olivo Sevillana / Frantoio",
+                categoria: "frutales",
+                precio: 18500,
+                badge: "Resistente a Sequía",
+                badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-300",
+                altura: "1.70m",
+                luz: "Pleno Sol",
+                riego: "Bajo",
+                descripcion: "Tronco leñoso firme y follaje plateado decorativo. Excelente para aceituna de mesa o aceite.",
+                imagen: "https://images.unsplash.com/photo-1541256942802-7b2996a6006e?auto=format&fit=crop&w=400&q=80"
+            },
+            // INTERIOR
+            {
+                id: 6,
+                nombre: "Monstera Deliciosa (Costilla de Adán)",
+                categoria: "interior",
+                precio: 16990,
+                badge: "Top Tendencia",
+                badgeColor: "bg-teal-100 text-teal-800 border-teal-300",
+                altura: "70cm - 90cm",
+                luz: "Luz Indirecta",
+                riego: "1 a 2 veces por semana",
+                descripcion: "Hojas grandes fenestradas que dan una vibra tropical moderna a cualquier living o dormitorio.",
+                imagen: "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=400&q=80"
+            },
+            {
+                id: 7,
+                nombre: "Ficus Lyrata (Hoja de Violín)",
+                categoria: "interior",
+                precio: 24900,
+                badge: "Elegancia Pura",
+                badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-300",
+                altura: "1.10m",
+                luz: "Mucha Luz sin Sol directo",
+                riego: "Suelo casi seco",
+                descripcion: "El árbol de interior preferido por decoradores. Hojas coriáceas onduladas de gran tamaño.",
+                imagen: "https://images.unsplash.com/photo-1545241047-6083a3684587?auto=format&fit=crop&w=400&q=80"
+            },
+            {
+                id: 8,
+                nombre: "Sansevieria Trifasciata (Espada)",
+                categoria: "interior",
+                precio: 8990,
+                badge: "Purificadora NASA",
+                badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-300",
+                altura: "50cm",
+                luz: "Tolera poca o mucha luz",
+                riego: "Cada 10 a 15 días",
+                descripcion: "Planta indestructible que filtra toxinas y genera oxígeno durante la noche. Ideal para principiantes.",
+                imagen: "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?auto=format&fit=crop&w=400&q=80"
+            },
+            {
+                id: 9,
+                nombre: "Helecho Espada Colgante en Canasto",
+                categoria: "interior",
+                precio: 7990,
+                badge: "Follaje Exuberante",
+                badgeColor: "bg-lime-100 text-lime-800 border-lime-300",
+                altura: "Colgante 60cm",
+                luz: "Sombra iluminada",
+                riego: "Humedad constante",
+                descripcion: "Frondas arqueadas y frondosas que caen elegantemente en terrazas techadas o galerías.",
+                imagen: "https://images.unsplash.com/photo-1596724817758-914b14d48507?auto=format&fit=crop&w=400&q=80"
+            },
+            // FLORES
+            {
+                id: 10,
+                nombre: "Hortensia Gigante en Flor (Azul / Fucsia)",
+                categoria: "flores",
+                precio: 8990,
+                badge: "Floración Espectacular",
+                badgeColor: "bg-pink-100 text-pink-800 border-pink-300",
+                altura: "50cm",
+                luz: "Semisombra",
+                riego: "Abundante en verano",
+                descripcion: "Cabezas florales tupidas y vistosas de larga duración. Gran atractivo para jardines y patios.",
+                imagen: "https://images.unsplash.com/photo-1508615039623-a25605d2b022?auto=format&fit=crop&w=400&q=80"
+            },
+            {
+                id: 11,
+                nombre: "Lavanda Francesa Aromática",
+                categoria: "flores",
+                precio: 4500,
+                badge: "Atrae Abejas & Mariposas",
+                badgeColor: "bg-purple-100 text-purple-800 border-purple-300",
+                altura: "40cm",
+                luz: "Pleno Sol",
+                riego: "Bajo",
+                descripcion: "Aroma relajante y flores espigadas de color lila. Repele mosquitos y plagas de forma natural.",
+                imagen: "https://images.unsplash.com/photo-1528722828814-77b9b83aafb2?auto=format&fit=crop&w=400&q=80"
+            },
+            {
+                id: 12,
+                nombre: "Buganvilia Trepadora Fucsia Intensa",
+                categoria: "flores",
+                precio: 9900,
+                badge: "Enredadera Rústica",
+                badgeColor: "bg-rose-100 text-rose-800 border-rose-300",
+                altura: "1.20m tutorada",
+                luz: "Mucho Sol directo",
+                riego: "Bajo una vez establecida",
+                descripcion: "Cubre muros, pérgolas y cercos con una explosión de color fucsia durante meses.",
+                imagen: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?auto=format&fit=crop&w=400&q=80"
+            },
+            // SUSTRATOS
+            {
+                id: 13,
+                nombre: "Saco Tierra de Hoja Harneada 50L",
+                categoria: "sustratos",
+                precio: 4500,
+                badge: "Calidad Seleccionada",
+                badgeColor: "bg-stone-200 text-stone-800 border-stone-300",
+                altura: "Saco 50 Litros",
+                luz: "N/A",
+                riego: "Mejora retención hídrica",
+                descripcion: "Tierra de bosque harneada fina, sin piedras ni malezas, rica en materia orgánica para siembra y trasplantes.",
+                imagen: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=400&q=80"
+            },
+            {
+                id: 14,
+                nombre: "Humus de Lombriz Californiana 100% Puro 20L",
+                categoria: "sustratos",
+                precio: 6990,
+                badge: "Abono Orgánico Premium",
+                badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-300",
+                altura: "Saco 20 Litros",
+                luz: "N/A",
+                riego: "Nutre las raíces",
+                descripcion: "Regenera el suelo agotado, aporta millones de microorganismos benéficos y no quema las raíces tiernas.",
+                imagen: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=400&q=80"
+            },
+            {
+                id: 15,
+                nombre: "Sustrato Profesional Plantas Interior 25L",
+                categoria: "sustratos",
+                precio: 7500,
+                badge: "Con Perlita y Fibra de Coco",
+                badgeColor: "bg-teal-100 text-teal-800 border-teal-300",
+                altura: "Saco 25 Litros",
+                luz: "N/A",
+                riego: "Evita pudrición de raíz",
+                descripcion: "Mezcla aireada especial para monsteras, calatheas y macetas sin compactación.",
+                imagen: "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?auto=format&fit=crop&w=400&q=80"
+            },
+            // MACETAS
+            {
+                id: 16,
+                nombre: "Maceta de Greda Tradicional Grande (35cm)",
+                categoria: "macetas",
+                precio: 9900,
+                badge: "Artesanal Chilena",
+                badgeColor: "bg-amber-100 text-amber-900 border-amber-300",
+                altura: "Diámetro 35cm",
+                luz: "Permite respiración radicular",
+                riego: "Excelente drenaje",
+                descripcion: "Moldeada a mano con orificio de drenaje. Regula la temperatura de las raíces de tus plantas.",
+                imagen: "https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=400&q=80"
+            },
+            {
+                id: 17,
+                nombre: "Macetero Cerámica Esmaltada Blanco Mate (28cm)",
+                categoria: "macetas",
+                precio: 14900,
+                badge: "Diseño Nórdico",
+                badgeColor: "bg-slate-100 text-slate-800 border-slate-300",
+                altura: "Diámetro 28cm con plato",
+                luz: "Interior o terraza",
+                riego: "No mancha el piso",
+                descripcion: "Líneas minimalistas limpias que realzan la belleza natural de cualquier planta de interior.",
+                imagen: "https://images.unsplash.com/photo-1598880940371-c756e015fea1?auto=format&fit=crop&w=400&q=80"
+            }
+        ];
+
+        let CARRITO = {};
+
+        function cargarCarritoStorage() {
+            try {
+                const guardado = localStorage.getItem('vivero_cart_florido');
+                if (guardado) {
+                    CARRITO = JSON.parse(guardado);
+                }
+            } catch(e) {
+                CARRITO = {};
+            }
+            actualizarInterfazCarrito();
+        }
+
+        function guardarCarritoStorage() {
+            try {
+                localStorage.setItem('vivero_cart_florido', JSON.stringify(CARRITO));
+            } catch(e) {}
+            actualizarInterfazCarrito();
+        }
+
+        function renderizarProductos(lista) {
+            const container = document.getElementById('gridProductos');
+            if (lista.length === 0) {
+                container.innerHTML = `
+                    <div class="col-span-full py-12 text-center text-slate-400">
+                        <i class="fa-solid fa-leaf text-4xl mb-2 text-emerald-300"></i>
+                        <p class="text-sm font-semibold">No se encontraron plantas o productos con ese criterio</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = lista.map(p => {
+                const enCarro = CARRITO[p.id] ? CARRITO[p.id].cantidad : 0;
+                return `
+                    <div class="bg-white rounded-3xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                        <div class="relative overflow-hidden bg-stone-100">
+                            <img src="${p.imagen}" alt="${p.nombre}" class="w-full h-48 sm:h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 text-[10px] font-extrabold px-2.5 py-1 rounded-full border plant-badge ${p.badgeColor}">
+                                ${p.badge}
+                            </span>
+                        </div>
+                        <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between space-y-3">
+                            <div>
+                                <h3 class="font-extrabold text-sm sm:text-base text-slate-900 group-hover:text-emerald-700 transition-colors leading-tight">
+                                    ${p.nombre}
+                                </h3>
+                                <p class="text-xs text-slate-500 mt-1 line-clamp-2 leading-relaxed">
+                                    ${p.descripcion}
+                                </p>
+                                
+                                <div class="mt-2.5 pt-2 border-t border-stone-100 grid grid-cols-2 gap-1 text-[10px] text-stone-500">
+                                    <span><i class="fa-solid fa-ruler-vertical text-emerald-600 mr-1"></i> ${p.altura}</span>
+                                    <span><i class="fa-solid fa-sun text-amber-500 mr-1"></i> ${p.luz}</span>
+                                </div>
+                            </div>
+
+                            <div class="pt-3 border-t border-stone-100 flex items-center justify-between">
+                                <div>
+                                    <span class="text-[10px] text-slate-400 font-medium block">Precio Vivero</span>
+                                    <span class="text-base sm:text-lg font-black text-emerald-700">$${p.precio.toLocaleString('es-CL')}</span>
+                                </div>
+
+                                <div>
+                                    ${enCarro > 0 ? `
+                                        <div class="flex items-center gap-1.5 bg-emerald-50 border border-emerald-300 rounded-xl p-1">
+                                            <button onclick="cambiarCantidad(${p.id}, -1)" class="w-6 h-6 rounded-lg bg-emerald-200 text-emerald-900 font-black text-xs flex items-center justify-center hover:bg-emerald-300 active:scale-90 transition">-</button>
+                                            <span class="text-xs font-black px-1.5 text-emerald-950">${enCarro}</span>
+                                            <button onclick="cambiarCantidad(${p.id}, 1)" class="w-6 h-6 rounded-lg bg-emerald-600 text-white font-black text-xs flex items-center justify-center hover:bg-emerald-500 active:scale-90 transition">+</button>
+                                        </div>
+                                    ` : `
+                                        <button onclick="agregarAlCarro(${p.id})" class="bg-botanic-800 hover:bg-botanic-700 active:scale-95 text-white font-bold text-xs px-3.5 py-2 rounded-xl flex items-center gap-1.5 shadow transition">
+                                            <i class="fa-solid fa-cart-plus text-emerald-300"></i> Agregar
+                                        </button>
+                                    `}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function filtrarCategoria(cat) {
+            document.querySelectorAll('.cat-pill').forEach(btn => {
+                btn.classList.remove('active-cat', 'bg-emerald-500', 'text-stone-950');
+                btn.classList.add('bg-emerald-950/70', 'text-emerald-200');
+            });
+            event.target.classList.add('active-cat', 'bg-emerald-500', 'text-stone-950');
+            event.target.classList.remove('bg-emerald-950/70', 'text-emerald-200');
+
+            if (cat === 'todos') {
+                renderizarProductos(PRODUCTOS);
+            } else if (cat === 'packs') {
+                window.location.hash = '#catalogo';
+                renderizarProductos(PRODUCTOS);
+            } else {
+                const filtrados = PRODUCTOS.filter(p => p.categoria === cat);
+                renderizarProductos(filtrados);
+            }
+        }
+
+        function buscarPlantas() {
+            const query = (document.getElementById('inputBusqueda').value || '').toLowerCase().trim();
+            if (!query) {
+                renderizarProductos(PRODUCTOS);
+                return;
+            }
+            const filtrados = PRODUCTOS.filter(p => 
+                p.nombre.toLowerCase().includes(query) ||
+                p.descripcion.toLowerCase().includes(query) ||
+                p.categoria.toLowerCase().includes(query)
+            );
+            renderizarProductos(filtrados);
+        }
+
+        function agregarAlCarro(id) {
+            const prod = PRODUCTOS.find(p => p.id === id);
+            if (!prod) return;
+
+            if (CARRITO[id]) {
+                CARRITO[id].cantidad += 1;
+            } else {
+                CARRITO[id] = {
+                    id: prod.id,
+                    nombre: prod.nombre,
+                    precio: prod.precio,
+                    cantidad: 1
+                };
+            }
+            guardarCarritoStorage();
+            renderizarProductos(PRODUCTOS);
+        }
+
+        function agregarPack(nombre, precio) {
+            const packId = 'pack_' + nombre.replace(/\s+/g, '_').toLowerCase();
+            if (CARRITO[packId]) {
+                CARRITO[packId].cantidad += 1;
+            } else {
+                CARRITO[packId] = {
+                    id: packId,
+                    nombre: nombre,
+                    precio: precio,
+                    cantidad: 1
+                };
+            }
+            guardarCarritoStorage();
+            toggleCarritoModal(true);
+        }
+
+        function cambiarCantidad(id, delta) {
+            if (!CARRITO[id]) return;
+            CARRITO[id].cantidad += delta;
+            if (CARRITO[id].cantidad <= 0) {
+                delete CARRITO[id];
+            }
+            guardarCarritoStorage();
+            renderizarProductos(PRODUCTOS);
+        }
+
+        function toggleCarritoModal(forzarAbrir = false) {
+            const modal = document.getElementById('modalCarrito');
+            if (forzarAbrir) {
+                modal.classList.remove('hidden');
+            } else {
+                modal.classList.toggle('hidden');
+            }
+        }
+
+        function actualizarInterfazCarrito() {
+            const items = Object.values(CARRITO);
+            const totalCount = items.reduce((acc, curr) => acc + curr.cantidad, 0);
+            
+            document.getElementById('badgeCartTotal').textContent = totalCount;
+            document.getElementById('bottomBarCount').textContent = totalCount;
+
+            const listaContainer = document.getElementById('carritoItemsLista');
+            if (items.length === 0) {
+                listaContainer.innerHTML = `
+                    <div class="text-center py-12 text-stone-400">
+                        <i class="fa-solid fa-basket-shopping text-4xl mb-2 text-stone-300"></i>
+                        <p class="text-xs font-semibold">Tu carrito está vacío</p>
+                        <p class="text-[11px] text-stone-400 mt-1">Agrega plantas, frutales o sustratos del catálogo</p>
+                    </div>
+                `;
+            } else {
+                listaContainer.innerHTML = items.map(item => `
+                    <div class="flex items-center justify-between p-3 bg-stone-50 rounded-2xl border border-stone-200">
+                        <div class="flex-1 pr-2">
+                            <h4 class="text-xs font-bold text-slate-800 leading-tight">${item.nombre}</h4>
+                            <p class="text-[11px] text-emerald-700 font-extrabold mt-0.5">$${(item.precio * item.cantidad).toLocaleString('es-CL')} <span class="text-[10px] text-stone-400 font-normal">($${item.precio.toLocaleString('es-CL')} c/u)</span></p>
+                        </div>
+                        <div class="flex items-center gap-1.5 bg-white border border-stone-300 rounded-xl p-1 shrink-0">
+                            <button onclick="cambiarCantidad('${item.id}', -1)" class="w-6 h-6 rounded-lg bg-stone-100 text-stone-800 font-black text-xs flex items-center justify-center hover:bg-stone-200">-</button>
+                            <span class="text-xs font-black px-1.5 text-stone-900">${item.cantidad}</span>
+                            <button onclick="cambiarCantidad('${item.id}', 1)" class="w-6 h-6 rounded-lg bg-emerald-600 text-white font-black text-xs flex items-center justify-center hover:bg-emerald-500">+</button>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            calcularTotales();
+        }
+
+        function calcularTotales() {
+            const items = Object.values(CARRITO);
+            const subtotal = items.reduce((acc, curr) => acc + (curr.precio * curr.cantidad), 0);
+
+            const select = document.getElementById('selectComuna');
+            const costoDespacho = select ? parseInt(select.selectedOptions[0].getAttribute('data-costo') || 0) : 0;
+            const totalFinal = subtotal > 0 ? (subtotal + costoDespacho) : 0;
+
+            document.getElementById('labelSubtotal').textContent = '$' + subtotal.toLocaleString('es-CL');
+            document.getElementById('labelDespacho').textContent = costoDespacho === 0 ? 'GRATIS ($0)' : '$' + costoDespacho.toLocaleString('es-CL');
+            document.getElementById('labelTotalFinal').textContent = '$' + totalFinal.toLocaleString('es-CL');
+            document.getElementById('bottomBarTotal').textContent = '$' + totalFinal.toLocaleString('es-CL');
+        }
+
+        function enviarPedidoWhatsApp() {
+            const items = Object.values(CARRITO);
+            if (items.length === 0) {
+                alert("Por favor agrega al menos una planta o producto a tu pedido.");
+                return;
+            }
+
+            const nombre = (document.getElementById('inputNombreCliente').value || '').trim() || 'Cliente';
+            const select = document.getElementById('selectComuna');
+            const comunaTexto = select.options[select.selectedIndex].text;
+            const costoDespacho = parseInt(select.selectedOptions[0].getAttribute('data-costo') || 0);
+
+            let subtotal = 0;
+            let listaTexto = items.map(it => {
+                const itemTotal = it.precio * it.cantidad;
+                subtotal += itemTotal;
+                return `🌿 ${it.cantidad}x ${it.nombre} - $${itemTotal.toLocaleString('es-CL')}`;
+            }).join('\n');
+
+            const totalFinal = subtotal + costoDespacho;
+
+            const mensaje = [
+                `¡Hola Vivero El Valle Florido! Mi nombre es ${nombre}.`,
+                `Quisiera encargar el siguiente pedido de plantas:`,
+                ``,
+                listaTexto,
+                ``,
+                `📍 Entrega en: ${comunaTexto}`,
+                `💰 Subtotal: $${subtotal.toLocaleString('es-CL')}`,
+                `🚚 Despacho: ${costoDespacho === 0 ? 'Gratis' : '$' + costoDespacho.toLocaleString('es-CL')}`,
+                `⭐ TOTAL ESTIMADO: $${totalFinal.toLocaleString('es-CL')}`,
+                ``,
+                `¿Tienen disponibilidad y fecha estimada de reparto? ¡Muchas gracias!`
+            ].join('\n');
+
+            const url = `https://api.whatsapp.com/send?phone=56982880494&text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        }
+
+        function solicitarVisitaPaisajismo() {
+            const servs = [];
+            if (document.getElementById('checkPasto').checked) servs.push('Instalación de Pasto en Rollo');
+            if (document.getElementById('checkRiego').checked) servs.push('Riego Tecnificado por Goteo');
+            if (document.getElementById('checkPlantacion').checked) servs.push('Plantación de Huerto Frutal');
+
+            const detalle = servs.length > 0 ? servs.join(', ') : 'Asesoría general de paisajismo y riego';
+
+            const mensaje = [
+                `¡Hola Vivero El Valle Florido!`,
+                `Me interesa cotizar una visita técnica a mi terreno/parcela para los siguientes servicios:`,
+                `🌱 ${detalle}`,
+                ``,
+                `¿Podrían indicarme valores y fechas disponibles para coordinar una visita?`
+            ].join('\n');
+
+            const url = `https://api.whatsapp.com/send?phone=56982880494&text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        }
+
+        // INICIALIZACIÓN
+        document.addEventListener('DOMContentLoaded', () => {
+            renderizarProductos(PRODUCTOS);
+            cargarCarritoStorage();
+        });
+    </script>
+</body>
+</html>
